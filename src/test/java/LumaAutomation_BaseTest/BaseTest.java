@@ -2,6 +2,7 @@ package LumaAutomation_BaseTest;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -17,9 +18,11 @@ public class BaseTest {
 
 		configObj = new AppConfig();
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + configObj.getDriverPath());
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+		driver = new ChromeDriver(options);
 		driver.get(configObj.getApplicationUrl());
+		driver.manage().window().maximize();
 	}
 
 	@AfterTest
