@@ -21,9 +21,11 @@ public class BaseTest {
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--no-sandbox");
+		options.addArguments("--headless");
+		options.addArguments("--disable-dev-shm-usage"); //!!!should be enabled for Jenkins
 		driver = new ChromeDriver(options);
 		driver.get(configObj.getApplicationUrl());
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 	}
 
 	@AfterTest
