@@ -18,7 +18,7 @@ public class BaseTest {
 
 		configObj = new AppConfig();
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + configObj.getDriverPath());
-		System.setProperty("webdriver.chrome.driver", "/usr/bin/google-chrom");
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--no-sandbox");
 		driver = new ChromeDriver(options);
