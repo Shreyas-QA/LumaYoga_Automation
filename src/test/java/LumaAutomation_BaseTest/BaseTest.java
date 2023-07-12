@@ -21,9 +21,10 @@ public class BaseTest {
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--no-sandbox");
-		options.addArguments("--headless");
+		//options.addArguments("--headless");
 		driver = new ChromeDriver(options);
 		System.out.println(driver);
+		driver.get("https://www.google.com/");
 		driver.get(configObj.getApplicationUrl());
 		
 	}
