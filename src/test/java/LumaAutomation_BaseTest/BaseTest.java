@@ -24,7 +24,7 @@ public class BaseTest {
 		options.addArguments("--headless");
 		driver = new ChromeDriver(options);
 		System.out.println(driver);
-		//driver.get(configObj.getApplicationUrl());
+		driver.get(configObj.getApplicationUrl());
 		
 	}
 

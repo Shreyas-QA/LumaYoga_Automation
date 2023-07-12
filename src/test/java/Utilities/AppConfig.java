@@ -32,6 +32,7 @@ public class AppConfig {
 
 	public String getApplicationUrl() {
 		String url = properties.getProperty("url");
+		System.out.println(url);
 		if (url != null)
 			return url;
 		else
