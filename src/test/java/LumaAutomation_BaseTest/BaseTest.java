@@ -16,20 +16,16 @@ public class BaseTest {
 	@BeforeTest
 	public void setup() {
 		
-		System.out.println("Hello World");
-
-	/*	configObj = new AppConfig();
+		configObj = new AppConfig();
 		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + configObj.getDriverPath());
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--no-sandbox");
 		options.addArguments("--headless");
 		driver = new ChromeDriver(options);
-		driver.get(configObj.getApplicationUrl());
-		//driver.manage().window().maximize();
-		 * 
-		 * 
-		 */
+		System.out.println(driver);
+		//driver.get(configObj.getApplicationUrl());
+		
 	}
 
 	@AfterTest
