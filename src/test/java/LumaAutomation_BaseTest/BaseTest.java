@@ -17,15 +17,14 @@ public class BaseTest {
 	public void setup() {
 		
 		configObj = new AppConfig();
-		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + configObj.getDriverPath());
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--no-sandbox");
-		//options.addArguments("--headless");
+		options.addArguments("--headless");
 		driver = new ChromeDriver(options);
 		System.out.println(driver);
-		driver.get("https://www.google.com/");
-		driver.get(configObj.getApplicationUrl());
+		//driver.get("https://www.google.com/");
+		//driver.get(configObj.getApplicationUrl());
 		
 	}
 
