@@ -1,5 +1,8 @@
 package LumaAutomation_BaseTest;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -26,6 +29,7 @@ public class BaseTest {
 		System.out.println(driver);
 		//driver.get("https://www.google.com/");
 		driver.get(configObj.getApplicationUrl());
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 	}
 
