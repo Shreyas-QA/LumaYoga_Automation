@@ -20,15 +20,15 @@ public class BaseTest {
 	public void setup() {
 		
 		configObj = new AppConfig();
-		//System.setProperty("webdriver.chrome.driver", "//Users//shreyassambare//eclipse-workspace//com.LumaYoga.Automation"+configObj.getDriverPath());
-		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "user.dir"+configObj.getDriverPath());
+		//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
 		options.addArguments("--disable-dev-shm-usage");
 		options.addArguments("--no-sandbox");
 		options.addArguments("--headless");
 		driver = new ChromeDriver(options);
-		System.out.println(driver);
+		System.out.println("This is driver information  "+driver);
 	    driver.get(configObj.getApplicationUrl());
 		System.out.println(configObj.getApplicationUrl());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
